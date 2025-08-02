@@ -1,15 +1,20 @@
+'use client'
+
 import React from 'react'
 import WrapButton from '../ui/wrap-button'
 import { Globe } from 'lucide-react'
+import Image from 'next/image'
 
 const HeroContent = () => {
   return (
     <>
       <div className="flex flex-col items-center py-16 text-center text-foreground">
-        <img
+        <Image
           className="h-10 mb-14"
           src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=806890&theme=light&t=1737565356562"
           alt="Product Hunt Badge"
+          width={250}
+          height={40}
         />
         <h3 className="leading-none text-4xl font-bold text-muted-foreground">
           Components crafted for
@@ -29,8 +34,6 @@ const HeroContent = () => {
           xmlns="http://www.w3.org/2000/svg"
           className="mt-2 mb-8 fill-foreground"
         >
-          {/* SVG paths kept as-is for the scroll animation/icon */}
-          {/* You can truncate this block if you want to use <YourSVGComponent /> */}
           <path d="M68.6958 5.40679C67.3329..." />
         </svg>
 
@@ -41,15 +44,19 @@ const HeroContent = () => {
       </div>
 
       {/* Background decorative images */}
-      <img
+      <Image
         className="absolute left-24 top-80 h-[700px] pointer-events-none select-none"
         src="https://skiper-ui.com/bg/bg_1.svg"
-        alt=""
+        alt="bg-1"
+        width={100}
+        height={700}
       />
-      <img
+      <Image
         className="absolute right-24 top-80 h-[500px] pointer-events-none select-none"
         src="https://skiper-ui.com/bg/bg_2.svg"
-        alt=""
+        alt="bg-2"
+        width={100}
+        height={500}
       />
     </>
   )
